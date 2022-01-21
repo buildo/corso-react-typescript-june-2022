@@ -17,8 +17,13 @@ const get = (path: string) =>
 
 export const getTrips = async (): Promise<Trip[]> => {
   const response = await get("/Trips");
+  await delay(2000);
   return decodeOrThrow(t.array(Trip), response);
 };
+
+async function delay(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
 function decodeOrThrow<A, O>(type: t.Type<A, O>, value: unknown): A {
   const decoded = type.decode(value);
