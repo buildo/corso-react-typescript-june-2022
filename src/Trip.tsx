@@ -1,12 +1,7 @@
 import * as styles from "./Trip.css";
+import * as models from "./models";
 
-type Props = {
-  id: number;
-  origin: string;
-  destination: string;
-  startDate: string;
-  endDate: string;
-};
+type Props = models.Trip;
 
 export function Trip(props: Props) {
   return (
