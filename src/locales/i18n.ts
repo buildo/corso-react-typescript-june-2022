@@ -7,7 +7,14 @@ import it from "./it.json";
 
 export const defaultNS = "translation";
 
-export const resources = {
+type Locale = "en" | "it";
+type Resources = {
+  [key in Locale]: {
+    translation: typeof en & typeof it;
+  };
+};
+
+export const resources: Resources = {
   en: {
     translation: en,
   },
