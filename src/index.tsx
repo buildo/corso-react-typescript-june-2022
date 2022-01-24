@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import "./locales/i18n";
 import { MainLayout } from "./MainLayout";
 import { QueryClient, QueryClientProvider } from "react-query";
 
