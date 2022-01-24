@@ -5,6 +5,7 @@ import { deleteTrip } from "./api";
 import { AsyncButton } from "./AsyncButton";
 import { useFormatDate, useTranslation } from "./locales/i18n";
 import { useNavigate } from "react-router";
+import * as routes from "./routes";
 
 type Props = models.Trip;
 
@@ -33,7 +34,7 @@ export function Trip(props: Props) {
   return (
     <div
       className={`${styles.trip} ${styles.tripStatus[props.status]}`}
-      onClick={() => navigate(`/trips/${props.id}`)}
+      onClick={() => navigate(routes.trip({ tripId: String(props.id) }))}
     >
       <span>{`${props.origin} -> ${props.destination} ${seatNumber} `}</span>
       <div>

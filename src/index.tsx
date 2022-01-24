@@ -7,6 +7,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { Trips } from "./Trips";
 import { TripDetails } from "./TripDetails";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import * as routes from "./routes";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -19,10 +20,10 @@ ReactDOM.render(
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<MainLayout />}>
+          <Route path={routes.root.pattern} element={<MainLayout />}>
             <Route index element={<Trips />} />
-            <Route path="/trips" element={<Trips />} />
-            <Route path="/trips/:tripId" element={<TripDetails />} />
+            <Route path={routes.trips.pattern} element={<Trips />} />
+            <Route path={routes.trip.pattern} element={<TripDetails />} />
           </Route>
         </Routes>
       </BrowserRouter>
