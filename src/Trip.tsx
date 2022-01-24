@@ -3,6 +3,7 @@ import * as models from "./models";
 import { useMutation, useQueryClient } from "react-query";
 import { deleteTrip } from "./api";
 import { AsyncButton } from "./AsyncButton";
+import { useTranslation } from "react-i18next";
 
 type Props = models.Trip;
 
@@ -11,6 +12,8 @@ export function Trip(props: Props) {
   const { status, mutate } = useMutation("deleteTrip", deleteTrip, {
     onSuccess: () => queryClient.invalidateQueries("trips"),
   });
+
+  const { t } = useTranslation();
 
   const seatNumber = ((): string => {
     switch (props.status) {
@@ -32,10 +35,10 @@ export function Trip(props: Props) {
           status={status}
           onClick={() => mutate(props.id)}
           labels={{
-            loading: "⏳ Deleting trip...",
-            error: "💥 Error!",
-            success: "✅ Trip deleted!",
-            idle: "🗑 Delete trip",
+            loading: t("Trips.deleteButton.loading"),
+            error: t("Trips.deleteButton.error"),
+            success: t("Trips.deleteButton.success"),
+            idle: t("Trips.deleteButton.idle"),
           }}
         />
       </div>

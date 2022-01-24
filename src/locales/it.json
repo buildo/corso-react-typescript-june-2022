@@ -1,0 +1,9 @@
+{
+  "MainLayout.Trips": "Viaggi",
+  "Trips.QueryLoading": "Caricamento...",
+  "Trips.QueryError": "Errore durante la richiesta dei viaggi!!",
+  "Trips.deleteButton.loading": "⏳ Eliminazione viaggio...",
+  "Trips.deleteButton.error": "💥 Errore!",
+  "Trips.deleteButton.success": "✅ Viaggio eliminato!",
+  "Trips.deleteButton.idle": "🗑 Elimina viaggio"
+}

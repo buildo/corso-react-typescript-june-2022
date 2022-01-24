@@ -1,0 +1,9 @@
+{
+  "MainLayout.Trips": "Trips",
+  "Trips.QueryLoading": "Loading...",
+  "Trips.QueryError": "Error while fetching trips!!",
+  "Trips.deleteButton.loading": "⏳ Deleting trip...",
+  "Trips.deleteButton.error": "💥 Error!",
+  "Trips.deleteButton.success": "✅ Trip deleted!",
+  "Trips.deleteButton.idle": "🗑 Delete trip"
+}
