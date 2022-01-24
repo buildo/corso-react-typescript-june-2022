@@ -1,5 +1,6 @@
 {
   "MainLayout.Trips": "Trips",
+  "MainLayout.TripDetails": "Trip details",
   "Trips.QueryLoading": "Loading...",
   "Trips.QueryError": "Error while fetching trips!!",
   "Trips.deleteButton.loading": "⏳ Deleting trip...",
@@ -7,5 +8,9 @@
   "Trips.deleteButton.success": "✅ Trip deleted!",
   "Trips.deleteButton.idle": "🗑 Delete trip",
   "LanguageSelector.English": "English",
-  "LanguageSelector.Italian": "Italiano"
+  "LanguageSelector.Italian": "Italiano",
+  "TripDetails.from": "From 🛫",
+  "TripDetails.to": "To 🛬",
+  "TripDetails.error": "Error while fetching trip!!",
+  "TripDetails.loading": "Loading..."
 }
