@@ -1,5 +1,6 @@
 {
   "MainLayout.Trips": "Viaggi",
+  "MainLayout.TripDetails": "Dettagli viaggio",
   "Trips.QueryLoading": "Caricamento...",
   "Trips.QueryError": "Errore durante la richiesta dei viaggi!!",
   "Trips.deleteButton.loading": "⏳ Eliminazione viaggio...",
@@ -7,5 +8,9 @@
   "Trips.deleteButton.success": "✅ Viaggio eliminato!",
   "Trips.deleteButton.idle": "🗑 Elimina viaggio",
   "LanguageSelector.English": "English",
-  "LanguageSelector.Italian": "Italiano"
+  "LanguageSelector.Italian": "Italiano",
+  "TripDetails.from": "Da 🛫",
+  "TripDetails.to": "A 🛬",
+  "TripDetails.error": "Errore durante la richiesta del viaggio!!",
+  "TripDetails.loading": "Caricamento..."
 }

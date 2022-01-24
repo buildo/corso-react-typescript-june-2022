@@ -32,6 +32,14 @@ export const deleteTrip = async (id: Trip["id"]): Promise<void> => {
   return del("/Trips", id);
 };
 
+export const getTrip = async (id: Trip["id"]): Promise<Trip> => {
+  const trips = await getTrips();
+  return (
+    trips.find((t) => t.id === id) ||
+    Promise.reject(new Error("Trip not found."))
+  );
+};
+
 async function delay(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }

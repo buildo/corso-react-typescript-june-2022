@@ -1,14 +1,16 @@
 import { useTranslation } from "./locales/i18n";
 import * as styles from "./MainLayout.css";
-import { Trips } from "./Trips";
+import { Outlet } from "react-router-dom";
+import { useMatch } from "react-router";
 
 export function MainLayout() {
   const { t, i18n } = useTranslation();
+  const isTripView = useMatch("/trips/:tripId");
 
   return (
     <div className={styles.mainLayout}>
       <header className={styles.header}>
-        {t("MainLayout.Trips")}
+        {isTripView ? t("MainLayout.TripDetails") : t("MainLayout.Trips")}
         <select
           value={i18n.language}
           onChange={(e) => i18n.changeLanguage(e.currentTarget.value)}
@@ -18,7 +20,7 @@ export function MainLayout() {
         </select>
       </header>
       <main className={styles.main}>
-        <Trips />
+        <Outlet />
       </main>
     </div>
   );

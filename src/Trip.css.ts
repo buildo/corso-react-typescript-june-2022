@@ -5,6 +5,10 @@ export const trip = style({
   alignItems: "center",
   justifyContent: "space-between",
   height: "50px",
+  ":hover": {
+    cursor: "pointer",
+    backgroundColor: "lightblue",
+  },
   selectors: {
     "&:not(:first-child)": {
       marginTop: "8px",
