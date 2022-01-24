@@ -5,9 +5,10 @@ import { useParams } from "react-router";
 import { matchQuery } from "./util/matchQuery";
 import { useTranslation } from "react-i18next";
 import { useFormatDate } from "./locales/i18n";
+import * as routes from "./routes";
 
 export function TripDetails() {
-  const params = useParams<"tripId">();
+  const params = useParams<keyof routes.TripParams>();
   const tripId = params.tripId!;
   const { t } = useTranslation();
   const formatDate = useFormatDate();
