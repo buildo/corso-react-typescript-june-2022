@@ -5,5 +5,7 @@
   "Trips.deleteButton.loading": "⏳ Eliminazione viaggio...",
   "Trips.deleteButton.error": "💥 Errore!",
   "Trips.deleteButton.success": "✅ Viaggio eliminato!",
-  "Trips.deleteButton.idle": "🗑 Elimina viaggio"
+  "Trips.deleteButton.idle": "🗑 Elimina viaggio",
+  "LanguageSelector.English": "English",
+  "LanguageSelector.Italian": "Italiano"
 }

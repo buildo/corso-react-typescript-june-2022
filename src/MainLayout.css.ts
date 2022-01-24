@@ -11,6 +11,7 @@ export const header = style({
   height: "80px",
   backgroundColor: "powderblue",
   alignItems: "center",
+  justifyContent: "space-between",
   padding: "0 16px",
 });
 
