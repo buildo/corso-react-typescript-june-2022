@@ -1,5 +1,5 @@
 import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
+import { initReactI18next, useTranslation } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 
 import en from "./en.json";
@@ -34,5 +34,19 @@ i18n
     defaultNS,
     resources,
   });
+
+export function useFormatDate() {
+  const { i18n } = useTranslation();
+
+  const formatDate = (d: Date): string => {
+    return Intl.DateTimeFormat(i18n.language, {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    }).format(d);
+  };
+
+  return formatDate;
+}
 
 export default i18n;

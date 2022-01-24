@@ -4,6 +4,7 @@ import { useMutation, useQueryClient } from "react-query";
 import { deleteTrip } from "./api";
 import { AsyncButton } from "./AsyncButton";
 import { useTranslation } from "react-i18next";
+import { useFormatDate } from "./locales/i18n";
 
 type Props = models.Trip;
 
@@ -25,11 +26,15 @@ export function Trip(props: Props) {
     }
   })();
 
+  const formatDate = useFormatDate();
+
   return (
     <div className={`${styles.trip} ${styles.tripStatus[props.status]}`}>
       <span>{`${props.origin} -> ${props.destination} ${seatNumber} `}</span>
       <div>
-        <span>{`${props.startDate.toDateString()} -> ${props.endDate.toDateString()}`}</span>
+        <span>{`${formatDate(props.startDate)} -> ${formatDate(
+          props.endDate
+        )}`}</span>
         <AsyncButton
           className={styles.deleteButton}
           status={status}
