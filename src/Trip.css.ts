@@ -1,4 +1,4 @@
-import { style } from "@vanilla-extract/css";
+import { style, styleVariants } from "@vanilla-extract/css";
 
 export const trip = style({
   display: "flex",
@@ -26,4 +26,32 @@ export const tripStatus = {
 
 export const deleteButton = style({
   marginLeft: 16,
+});
+
+const baseDialogOverlay = style({
+  position: "fixed",
+  top: 0,
+  left: 0,
+  bottom: 0,
+  right: 0,
+  display: "flex",
+  backgroundColor: "rgba(0, 0, 0, .4)",
+  alignItems: "center",
+  justifyContent: "center",
+});
+
+export const dialog = style({
+  padding: 24,
+  backgroundColor: "white",
+});
+
+export const dialogActions = style({
+  display: "flex",
+  marginTop: 24,
+  justifyContent: "flex-end",
+});
+
+export const dialogOverlay: Record<"open" | "closed", string> = styleVariants({
+  open: [baseDialogOverlay],
+  closed: [baseDialogOverlay, { display: "none" }],
 });
