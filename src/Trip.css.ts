@@ -24,6 +24,6 @@ export const tripStatus = {
   CheckedIn: style({ background: "orange" }),
 };
 
-export const deleteButton = style({
+export const tripButton = style({
   marginLeft: 16,
 });
