@@ -7,6 +7,8 @@
   "Trips.deleteButton.error": "💥 Error!",
   "Trips.deleteButton.success": "✅ Trip deleted!",
   "Trips.deleteButton.idle": "🗑 Delete trip",
+  "Trips.deleteButton.confirm": "✅ Confirm",
+  "Trips.deleteCancel": "❌ Cancel",
   "LanguageSelector.English": "English",
   "LanguageSelector.Italian": "Italiano",
   "TripDetails.from": "From 🛫",
