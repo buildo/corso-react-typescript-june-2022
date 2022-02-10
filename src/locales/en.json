@@ -1,0 +1,20 @@
+{
+  "MainLayout.Trips": "Trips",
+  "MainLayout.TripDetails": "Trip Details",
+
+  "Trips.QueryLoading": "Loading...",
+  "Trips.QueryError": "Error while fetching trips!!",
+
+  "TripDetails.QueryError": "Error while fetching trip with id: {tripId}!!",
+  "TripDetails.QueryLoading": "Loading...",
+  "TripDetails.From": "🛫 From",
+  "TripDetails.To": "🛬 To",
+  "TripDetails.Delete": "Delete",
+  "TripDetails.DeleteError": "Error while deleting",
+  "TripDetails.UpdateStatusLoading": "Loading...",
+  "TripDetails.UpdateStatusError": "Error while updating status",
+
+  "TripStatus.Requested": "Requested",
+  "TripStatus.Booked": "Booked",
+  "TripStatus.CheckedIn": "Checked-in"
+}
