@@ -1,9 +1,9 @@
 import { useQuery } from "react-query";
 import { getTrips } from "./api";
+import { useTranslation } from "./locales/i18n";
 import { Trip } from "./Trip";
 import * as styles from "./Trips.css";
 import { matchQuery } from "./util/matchQuery";
-import { useTranslation } from "react-i18next";
 
 export function Trips() {
   const tripsQuery = useQuery("trips", getTrips);

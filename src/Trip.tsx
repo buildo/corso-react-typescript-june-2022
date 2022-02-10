@@ -3,8 +3,7 @@ import * as models from "./models";
 import { useMutation, useQueryClient } from "react-query";
 import { deleteTrip } from "./api";
 import { AsyncButton } from "./AsyncButton";
-import { useTranslation } from "react-i18next";
-import { useFormatDate } from "./locales/i18n";
+import { useFormatDate, useTranslation } from "./locales/i18n";
 
 type Props = models.Trip;
 

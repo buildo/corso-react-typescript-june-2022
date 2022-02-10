@@ -1,4 +1,4 @@
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "./locales/i18n";
 import * as styles from "./MainLayout.css";
 import { Trips } from "./Trips";
 

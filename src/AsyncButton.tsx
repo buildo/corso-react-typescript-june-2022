@@ -1,7 +1,9 @@
+import { TranslatedString } from "./locales/i18n";
+
 type Props = {
   status: "idle" | "loading" | "error" | "success";
   onClick: () => void;
-  labels: Record<Props["status"], string>;
+  labels: Record<Props["status"], TranslatedString>;
   className?: string;
 };
 
