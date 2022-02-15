@@ -2,7 +2,6 @@ import { style } from "@vanilla-extract/css";
 
 export const trip = style({
   display: "flex",
-  backgroundColor: "lightgray",
   alignItems: "center",
   justifyContent: "space-between",
   height: "50px",
@@ -14,3 +13,9 @@ export const trip = style({
   padding: "0 8px",
   borderRadius: "4px",
 });
+
+export const tripStatus = {
+  Requested: style({ background: "lightgray" }),
+  Booked: style({ background: "lightgreen" }),
+  CheckedIn: style({ background: "orange" }),
+};
