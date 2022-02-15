@@ -2,6 +2,7 @@ import * as styles from "./Trip.css";
 import * as models from "./models";
 import { useMutation, useQueryClient } from "react-query";
 import { deleteTrip } from "./api";
+import { AsyncButton } from "./AsyncButton";
 
 type Props = models.Trip;
 
@@ -21,30 +22,22 @@ export function Trip(props: Props) {
     }
   })();
 
-  const deleteButtonLabel = ((): string => {
-    switch (status) {
-      case "loading":
-        return "⏳ Deleting trip...";
-      case "error":
-        return "💥 Error!";
-      case "idle":
-        return "🗑 Delete trip";
-      case "success":
-        return "✅ Trip deleted!";
-    }
-  })();
-
   return (
     <div className={`${styles.trip} ${styles.tripStatus[props.status]}`}>
       <span>{`${props.origin} -> ${props.destination} ${seatNumber} `}</span>
       <div>
         <span>{`${props.startDate.toDateString()} -> ${props.endDate.toDateString()}`}</span>
-        <button
+        <AsyncButton
           className={styles.deleteButton}
+          status={status}
           onClick={() => mutate(props.id)}
-        >
-          {deleteButtonLabel}
-        </button>
+          labels={{
+            loading: "⏳ Deleting trip...",
+            error: "💥 Error!",
+            success: "✅ Trip deleted!",
+            idle: "🗑 Delete trip",
+          }}
+        />
       </div>
     </div>
   );
