@@ -19,3 +19,7 @@ export const tripStatus = {
   Booked: style({ background: "lightgreen" }),
   CheckedIn: style({ background: "orange" }),
 };
+
+export const deleteButton = style({
+  marginLeft: 16,
+});
